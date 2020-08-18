@@ -1,0 +1,10 @@
+version: '3'
+services:
+  python:
+    container_name: docker-compose-falcon
+    build: .
+    image: docker-compose-falcon
+    volumes:
+      - ./src:/code/src
+    ports:
+      - "8000:8000"
