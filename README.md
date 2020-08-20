@@ -12,10 +12,19 @@ Update `Dockerfile`.
 docker-compose up -d
 ```
 
+## GET
+
 Open `http://localhost:8000/quote` in your browser; you'll see this output:
 
 ```
 {"quote": "I've always been more interested in the future than in the past.", "author": "Grace Hopper"}
+```
+
+## POST
+
+```
+pip install httpie
+http POST http://localhost:8000/quote
 ```
 
 # test

@@ -30,6 +30,15 @@ class QuoteResource:
             'author': 'Grace Hopper'
         }
         resp.media = quote
+    def on_post(self, req, resp):
+        quote = {
+            'quote': (
+                "I've always been more interested in "
+                "the future than in the past."
+            ),
+            'author': 'Grace Hopper'
+        }
+        resp.media = quote
 
 api = falcon.API(middleware=[CORSComponent()])
 api.add_route('/quote', QuoteResource())
